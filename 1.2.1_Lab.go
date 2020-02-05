@@ -2,7 +2,7 @@
 
 //ASCII Art - 1 point
 //Create ASCII Art (Links to an external site.) of your choice. At least 5 lines of code. Don't forget header comments.
-//Want to draw a frog. 
+//Want to drawballerina ice skater. 
 
 //"Today" - 2 points: 
 
@@ -27,3 +27,4 @@
 
 //Want to say: Oroville, California  64.0 degrees in Oroville, California  currently
 // "(current temperature in float data type) in (City name in string data type) , (State name in string data type)" 
+ 
