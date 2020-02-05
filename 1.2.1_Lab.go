@@ -1,3 +1,7 @@
+// Programmer name: Jaime Ann
+// Date completed:  01/30/2020
+// Description: 1.2.1 Lab - Section 2
+
 //1.2.1 Section 2 - You Plan It : (Pseudocode Activity)
 
 //ASCII Art - 1 point
