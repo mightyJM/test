@@ -1,6 +1,6 @@
-// Programmer name: __________
-// Date completed:  __________
-// Description: ___________________________
+// Programmer name: Jaime Ann
+// Date completed:  01/30/2020
+// Description: 1.2.1 Lab - Section 1 
 
 package main
 
