@@ -18,18 +18,18 @@ import "fmt"
 
 func main() {
   fmt.Println("            W")
-fmt.PrintIn("          ~*(._.)*~")
-          fmt.PrintIn(" J(   )P")  
-          fmt.PrintIn("  MMMMM  ^")
-         fmt.PrintIn("   |   |_ |   ")                
-            fmt.PrintIn("| ")
-            fmt.PrintIn("V  ")  
+fmt.Println("          ~*(._.)*~")
+fmt.Println("           J(   )P")  
+fmt.Println("            MMMMM  ^")
+fmt.Println("            |   |_ |   ")                
+fmt.Println("            | ")
+fmt.Println("            V  ")  
 } 
 
 
 
 //"Today" - 2 points: 
-//Directions: Create two string variables that hold the current date of the week and month.  Create two integer variables that hold the current date and year.   Output and appropriate message of today's date (appropriate includes verbiage to explain what we are seeing).
+//Directions: Create two string variables that hold the current date of the week and month.  Create two integer variables that hold the current date and year.   Output an appropriate message of today's date (appropriate includes verbiage to explain what we are seeing).
 
 // Want to say: Today is Thursday, January 30th in the year 2020
 //"Today is (day of the week in string data type), (current month in string data type) (current day of the month in integer data type)th in the year (current year in integer data type)"
@@ -41,7 +41,7 @@ fmt.PrintIn("          ~*(._.)*~")
 //"(Integer value of current month with 0 preceding integers <10) (integer value of current date with 0 preceding integers <10) (Integer value of current year)
 
 //Want to say: I want to do this another way but havent figured out how without commas or slash marks.
-
+// 30 01 2020 ??
 
 
 //"Temperature" - 2  points

@@ -1,7 +1,7 @@
 // Programmer name: Jaime Ann
 // Date completed:  01/30/2020
 // Description: 1.2.1 Lab - Section 2
-
+package main
 //1.2.1 Section 2 - You Plan It : (Pseudocode Activity)
 
 //ASCII Art - 1 point
@@ -31,4 +31,3 @@
 
 //Want to say: Oroville, California  64.0 degrees in Oroville, California  currently
 // "(current temperature in float data type) in (City name in string data type) , (State name in string data type)" 
- 
