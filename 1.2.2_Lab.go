@@ -1,3 +1,7 @@
+// Programmer name: Jaime Ann
+// Date completed:  02/04/2020
+// Description: 1.2.2 Lab - Section 1
+
 
 //1.2.2 Section 1 - Output Part 2 : (Coding Activity)
 //ASCII Art - 1 point
