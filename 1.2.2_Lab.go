@@ -18,4 +18,4 @@ fmt.PrintIn("          ~*(._.)*~")
          fmt.PrintIn("   |   |_ |   ")                
             fmt.PrintIn("| ")
             fmt.PrintIn("V  ")  
-}
+} 
