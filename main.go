@@ -23,7 +23,7 @@ func main() {
 
 
 //ASCII Art - 1 point
-
+/*
 package main
 
 import "fmt"
@@ -37,7 +37,7 @@ fmt.Println("            |   |_ |   ")
 fmt.Println("            | ")
 fmt.Println("            V  ")  
 } 
-
+*/
 
 
 //"Today" - 2 points: 
@@ -61,3 +61,33 @@ fmt.Println("            V  ")
 
 //Want to say: Oroville, California  64.0 degrees in Oroville, California  currently
 // "(current temperature in float data type) in (City name in string data type) , (State name in string data type)" 
+
+// Programmer name: Jaime Ann
+// Date completed:  02/06/2020
+// Description: 1.4.1 Lab - Input Part 1
+
+
+import "fmt"
+
+func main() {
+    //declare variable for favorite food and store your favorite food.
+    //var favFood string
+    var favFood= "flan"
+
+    //declare variables for name and age (make sure they are appropriate data types)
+
+    var nameOf string
+    var ageOf int
+   
+    //ask the user to enter their answer for name and age.
+    fmt.Println("Hi there! What's your name?")
+    fmt.Scanln(&nameOf)
+    fmt.Println("Awesome,",(nameOf),"And how old are you?")
+    fmt.Scanln(&ageOf)
+
+    //output a welcome statement using their name
+    fmt.Println ("We're so glad to have you here", (nameOf))
+    
+    //output a statement that says At their age you enjoyed the favorite food
+    fmt.Println("When I was", (ageOf),", my favorite food was ",(favFood))
+}

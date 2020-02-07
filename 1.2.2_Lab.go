@@ -13,7 +13,7 @@
 //Execution of above follows: 
 
 package main
-
+/*
 import "fmt"
 
 func main() {
@@ -48,4 +48,4 @@ fmt.Println("            V  ")
 //Directions: Create a string variable that holds your home town name and a float variable that holds a temperature.  Output the "current" temperature.  Update your temperature with tomorrow's high temperature and output tomorrow's temperature.  Make sure you use appropriate verbiage to explain what we are seeing.
 
 //Want to say: Oroville, California  64.0 degrees in Oroville, California  currently
-// "(current temperature in float data type) in (City name in string data type) , (State name in string data type)" 
+// "(current temperature in float data type) in (City name in string data type) , (State name in string data type)" */
