@@ -64,7 +64,7 @@ fmt.Println("            V  ")
 
 // Programmer name: Jaime Ann
 // Date completed:  02/06/2020
-// Description: 1.4.1 Lab - Input Part 1
+// Description: 1.4.1 Lab - Input Part 1- Section 1
 
 
 import "fmt"
@@ -91,3 +91,27 @@ func main() {
     //output a statement that says At their age you enjoyed the favorite food
     fmt.Println("When I was", (ageOf),", my favorite food was ",(favFood))
 }
+// Programmer name: Jaime Ann
+// Date completed:  02/09/2020
+// Description: 1.4.1 Lab - Input Part 1 - Section 2 (Pseudocode)
+
+//MPG calculator (3 points)
+//Directions: Have the program prompt the user for the size of the gas tank and how many miles traveled.  Determine what the average Miles Per Gallon were on that trip.
+
+//Greet the user.  Mention that you'd be more than happy to calculate their vehicle's MPG for them. 
+//Print "For starters how many gallons of gas can your vehicle's gas tank hold?"
+//allow them to input an integer for the variable, maxGallons
+//Print "Okay,great! How many miles are you able to travel after filling your tank before it gets back down to empty again?"
+//Allow them to input an integer for the variable,milesToEmpty
+//Divide the second variable by the first variable to get the MPG
+// Print "Based on my calculations, your vehicle gets about ___ miles to the gallon!", printing the quotient
+
+//Calculator (3 points)
+//Have the program prompt the user for two numbers.  Output each of the math operator equations using those numbers and the answer.  For example you would output "7 + 3 = 10".
+
+//Greet the user. 
+//Print "I'd love to help you do some basic addition math problems! To start, what is the first of two numbers you'd like to add together?
+//Allow the user to input an integer for the variable, addOne
+//Print "Perfect! And what for your second number?"
+//Allow the user to input another integer for the second variable, addTwo
+//Print "Great, thank you! Those numbers added together are ", (addOne) + (addTwo) = (the sum) 
