@@ -117,39 +117,52 @@ func main() {
 //Print "Great, thank you! Those numbers added together are ", (addOne) + (addTwo) = (the sum) 
 
 // Programmer name: Jaime Ann
-// Date completed:  02/11/2020
+// Date completed:  02/13/2020
 // Description: 1.4.2 Lab - Input Part 2 -(Coding)
 
 //MPG calculator (3 points)
 //Directions: Have the program prompt the user for the size of the gas tank and how many miles traveled.  Determine what the average Miles Per Gallon were on that trip.
-/*import "fmt"
+import "fmt"
 
 func main() {
 
 var maxGallons int
 var milesToEmpty int
+var MPG int 
 
 //Greet the user.  Mention that you'd be more than happy to calculate their vehicle's MPG for them. 
+
 fmt.Println("I'd be more than happy to calculate your vehicle's average MPG for you if you could give me just a bit of information about it!")
+
 //Print "For starters how many gallons of gas can your vehicle's gas tank hold?"
+
 fmt.Println("For starters, how many gallons of gas can your gas tank hold?")
+
 //allow them to input an integer for the variable, maxGallons
 fmt.Scanln(&maxGallons)
+
 //Print "Okay,great! How many miles are you able to travel after filling your tank before it gets back down to empty again?"
+
 fmt.Println("Okay, great! How many miles are you able to travel after filling your tank before it gets back down to empty again?")
+
 //Allow them to input an integer for the variable,milesToEmpty
+
 fmt.Scanln(&milesToEmpty)
+
 //Divide the second variable by the first variable to get the MPG
-var MPG int 
-MPG = maxGallons / milesToEmpty
+
+MPG = milesToEmpty / maxGallons
+
 // Print "Based on my calculations, your vehicle gets about ___ miles to the gallon!", printing the quotient
+
 fmt.Println("Based on my calculations, your vehicle gets about",(MPG), "miles to the gallon!")
+
 //Not able to get appropriate quotient above. Not sure what error is occuring in code. 
-}*/
+}
 
 //Calculator (3 points)
 //Have the program prompt the user for two numbers.  Output each of the math operator equations using those numbers and the answer.  For example you would output "7 + 3 = 10".
-import "fmt"
+/*import "fmt"
 
 func main () {
 //Greet the user. 
@@ -157,7 +170,6 @@ func main () {
 var addOne int
 var addTwo int 
 var sum int
-sum = addOne + addTwo
 
 fmt.Println("I'd love to help you do some basic addition math problems! To start, what is the first of two numbers you'd like to add together?")
 //Allow the user to input an integer for the variable, addOne
@@ -167,6 +179,14 @@ fmt.Println("Perfect! And what for your second number?")
 //Allow the user to input another integer for the second variable, addTwo
 fmt.Scanln(&addTwo)
 //Print "Great, thank you! Those numbers added together are ", (addOne) + (addTwo) = (the sum) 
+sum = addOne + addTwo
 fmt.Println("Great, thank you! Those numbers added together are ", (addOne), " + ", (addTwo), " = ", (sum), "!" )
 }
-//Unknown error in code above. Sum not correct. 
+*/
+
+
+// Programmer name: Jaime Ann
+// Date completed:  02/13/2020
+// Description: Project #1 (SLO A, B, & D)
+
+//6. Create a program that will determine how much a person pays for their yogurt at the new yogurt shop based on size of yogurt (in oz), toppings, coupon, sales tax and tip. The new yogurt shop charges $.17 per oz of yogurt and the cup is ¼ of an oz.  Each topping costs $.50.  If the customer has a coupon they can take of between 10% and 50% of their costs.  Sales tax in Chico is 7.25% and a person can choose their own tip.  Output a receipt with ounces of yogurt without the cup, toppings costs, sales tax, discounts, and tip as well as the total fee to be paid.
