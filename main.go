@@ -122,7 +122,7 @@ func main() {
 
 //MPG calculator (3 points)
 //Directions: Have the program prompt the user for the size of the gas tank and how many miles traveled.  Determine what the average Miles Per Gallon were on that trip.
-import "fmt"
+/*import "fmt"
 
 func main() {
 
@@ -159,6 +159,7 @@ fmt.Println("Based on my calculations, your vehicle gets about",(MPG), "miles to
 
 //Not able to get appropriate quotient above. Not sure what error is occuring in code. 
 }
+*/
 
 //Calculator (3 points)
 //Have the program prompt the user for two numbers.  Output each of the math operator equations using those numbers and the answer.  For example you would output "7 + 3 = 10".
@@ -189,4 +190,100 @@ fmt.Println("Great, thank you! Those numbers added together are ", (addOne), " +
 // Date completed:  02/13/2020
 // Description: Project #1 (SLO A, B, & D)
 
-//6. Create a program that will determine how much a person pays for their yogurt at the new yogurt shop based on size of yogurt (in oz), toppings, coupon, sales tax and tip. The new yogurt shop charges $.17 per oz of yogurt and the cup is ¼ of an oz.  Each topping costs $.50.  If the customer has a coupon they can take of between 10% and 50% of their costs.  Sales tax in Chico is 7.25% and a person can choose their own tip.  Output a receipt with ounces of yogurt without the cup, toppings costs, sales tax, discounts, and tip as well as the total fee to be paid.
+//6. Create a program that will determine how much a person pays for their yogurt at the new yogurt shop based on size of yogurt (in oz), toppings, coupon, sales tax and tip. The new yogurt shop charges $.17 per oz of yogurt and the cup is ¼ of an oz.  Each topping costs $.50.  If the customer has a coupon they can take off between 10% and 50% of their costs.  Sales tax in Chico is 7.25% and a person can choose their own tip.  Output a receipt with ounces of yogurt without the cup, toppings costs, sales tax, discounts, and tip as well as the total fee to be paid.
+
+//Ultimate goal: give customer a cost for their yogurt based on ounces of yogurt, number of toppings, coupon price reduction, sales tax price additions, and an optional tip
+
+import 
+ "fmt"
+
+
+func main() {
+
+var totalOz float64
+var yogurtOz float64
+var yogurtCost float64
+var toppingQty float64
+var toppingCost float64
+var preCouponTotal float64
+var couponPercentOff float64
+var couponSavings float64
+var preTaxTotal float64
+var caSalesTax float64
+var postTaxTotal float64
+var tip float64
+var postTipTotal float64
+var customerSignedName string
+
+
+//how many ounces of yogurt (cost at .17 per oz), print an interaction and then scan in the input
+
+fmt.Println("Please place the frozen yogurt for the current order on the scale and input the number displayed on the scale's screen here.")
+
+fmt.Scanln(&totalOz)
+
+//subtract weight of container from overall weight, est .25 oz weight
+
+yogurtOz = totalOz - .25
+
+yogurtCost = yogurtOz * .17
+
+//how many toppings (cost at .50 each), print interaction and scan input
+
+fmt.Println("How many toppings were added to the customer's tasty treat today?")
+
+fmt.Scanln(&toppingQty)
+
+toppingCost = toppingQty * .50
+
+//calculate pre-tax and pre-coupon total
+
+preCouponTotal = yogurtCost + toppingCost
+
+//coupon price reductions (10-50% reduction), print interaction and scan input
+
+fmt.Println("So far, so good! If the customer brought a coupon in today, what percentage off is the coupon for? Please input this percentage as a decimal. *Note that your store currently has coupons out only for between 10% and 50% off the total price.")
+
+fmt.Scanln(&couponPercentOff)
+
+couponSavings = preCouponTotal * couponPercentOff
+
+preTaxTotal = preCouponTotal - couponSavings
+
+
+//sales tax based on post coupon total (multiply total by .0725 for 7.25% tax. Add product to post coupon total)
+
+caSalesTax = preTaxTotal * .0725
+postTaxTotal = preTaxTotal + caSalesTax
+
+//Print subtotal for employee and advise screen be turned for customer interaction portion of purchase process
+
+fmt.Println("The customer's subtotal after tax is ", (postTaxTotal), ". Please turn this screen toward the customer for optional tip and receipt options") 
+
+//Ask customer if they would like to tip. Add tip to post-tax total
+
+fmt.Println("Your subtotal is ", (postTaxTotal) , ". If you would you like to leave a tip for our froyo experts today, please input a tip amount below.")
+
+fmt.Scanln(&tip)
+
+postTipTotal = postTaxTotal + tip
+
+//Print the grand total for the customer and request their electronic signature for purchase approval 
+
+fmt.Println("Thank you for coming in to Cold Hard Cache FroYo today! Your grand total is ", (postTipTotal), "! Please enter your name below to approve this purchase.")
+
+fmt.Scanln(&customerSignedName)
+
+//Print receipt with ounces of yogurt without the cup, toppings costs, sales tax, discounts, and tip as well as the total fee to be paid.
+
+fmt.Println("Enjoy! Your receipt is shown below.")
+fmt.Println("Ounces of FroYo:", (yogurtOz))
+fmt.Println("FroYo Subtotal: $",(yogurtCost))
+fmt.Println("Topping Subtotal: $",(toppingCost))
+fmt.Println("CA Sales Tax: $",(caSalesTax))
+fmt.Println("Coupon Savings: $",(couponSavings))
+fmt.Println("Tip Subtotal: $",(tip))
+fmt.Println("Grand Total: $",(postTipTotal))
+fmt.Println("Customer Signature:",(customerSignedName))
+
+}
