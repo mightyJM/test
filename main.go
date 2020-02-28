@@ -193,7 +193,7 @@ fmt.Println("Great, thank you! Those numbers added together are ", (addOne), " +
 //6. Create a program that will determine how much a person pays for their yogurt at the new yogurt shop based on size of yogurt (in oz), toppings, coupon, sales tax and tip. The new yogurt shop charges $.17 per oz of yogurt and the cup is ¼ of an oz.  Each topping costs $.50.  If the customer has a coupon they can take off between 10% and 50% of their costs.  Sales tax in Chico is 7.25% and a person can choose their own tip.  Output a receipt with ounces of yogurt without the cup, toppings costs, sales tax, discounts, and tip as well as the total fee to be paid.
 
 //Ultimate goal: give customer a cost for their yogurt based on ounces of yogurt, number of toppings, coupon price reduction, sales tax price additions, and an optional tip
-
+/*
 import 
  "fmt"
 
@@ -286,4 +286,82 @@ fmt.Println("Tip Subtotal: $",(tip))
 fmt.Println("Grand Total: $",(postTipTotal))
 fmt.Println("Customer Signature:",(customerSignedName))
 
+}
+*/
+
+
+// Programmer name: Jaime Ann
+// Date completed:  02/25/2020
+// Description: 2.3.2 Lab- If Part 2
+
+//Paystub- 3 points
+//Have a user enter their hourly wages, how many hours they work, their name.  Determine their wages including overtime and deduct their taxes (using a flat tax rate of 12%).  Print a paystub.
+
+import 
+ "fmt"
+
+
+func main() {
+//declare variables for hourly wage, hourly wage during overtime, hours worked, name, total wage earned, taxes, and total after tax deduction
+
+var userName string
+var wage float64 
+var wageOvertime float64
+var hoursWorked float64
+var hoursOvertime float64
+var hoursWorkedMinusOt float64
+var overtimeEarnings float64
+var totalEarned float64
+var taxTotal float64
+var totalAwarded float64
+
+//print statement requesting user's name
+fmt.Println("Hi there! Before we get started, please confirm your name.")
+//scan in userName
+fmt.Scanln(&userName)
+//print statement letting the user know what we're attempting to accomplish
+fmt.Println("Great, ", userName,"! Now we'll move into calculating your projected total earnings and take home income for this week's paystub.")
+//print statement requesting user's hourly wage
+fmt.Println("What is your current hourly wage?")
+//scan in wage
+fmt.Scanln(&wage)
+//create equation to calculate wageOvertime 
+wageOvertime = wage * 1.5 
+//print statement requesting how many hours the user has worked 
+fmt.Println("How many hours did you work this week?")
+//scan in hoursWorked
+fmt.Scanln(&hoursWorked)
+//create if statement for hoursWorked being greater than 40, hoursWorked - 40 = hoursOvertime, hoursOvertime * wageOvertime = overtimeEarnings 
+if hoursWorked > 40 {
+  hoursOvertime= hoursWorked - 40
+  hoursWorkedMinusOt= hoursWorked-hoursOvertime
+  overtimeEarnings= hoursOvertime*wageOvertime
+  totalEarned= (hoursWorked*wage)+overtimeEarnings
+//create else statement for hoursWorked<= 40, hoursWorked * wage = totalEarned
+}else{ 
+  totalEarned= hoursWorked* wage
+  hoursOvertime= 0
+  wageOvertime= 0
+  overtimeEarnings= 0
+  hoursWorkedMinusOt = hoursWorked
+}
+//print statement telling user their total earnings before taxes
+fmt.Println("Your total earnings before tax deductions are",totalEarned,".")
+//create equation to find taxTotal by multiplying totalEarned by .12
+taxTotal=totalEarned*.12
+//subtract taxTotal from totalEarned to find totalAwarded
+totalAwarded=totalEarned-taxTotal
+//print statement telling user their earnings after deductions
+fmt.Println("Your earnings after tax deductions are", totalAwarded,".")
+//print statement including user weekly income report
+fmt.Println("Below I have printed for you your weekly paystub for the current week.")
+fmt.Println("Name:",userName)
+fmt.Println("Hourly Wage:",wage)
+fmt.Println("Hourly Overtime Wage:",wageOvertime)
+fmt.Println("Hours Worked:",hoursWorkedMinusOt)
+fmt.Println("Overtime Hours Worked:",hoursOvertime)
+fmt.Println("Overtime Earnings:",overtimeEarnings)
+fmt.Println("Total Earning Prior to Deductions:",totalEarned)
+fmt.Println("Taxes Deducted:", taxTotal)
+fmt.Println("Total Wages Awarded:",totalAwarded)
 }
