@@ -296,7 +296,7 @@ fmt.Println("Customer Signature:",(customerSignedName))
 
 //Paystub- 3 points
 //Have a user enter their hourly wages, how many hours they work, their name.  Determine their wages including overtime and deduct their taxes (using a flat tax rate of 12%).  Print a paystub.
-
+/*
 import 
  "fmt"
 
@@ -364,4 +364,148 @@ fmt.Println("Overtime Earnings:",overtimeEarnings)
 fmt.Println("Total Earning Prior to Deductions:",totalEarned)
 fmt.Println("Taxes Deducted:", taxTotal)
 fmt.Println("Total Wages Awarded:",totalAwarded)
+}
+*/
+
+/*
+// Programmer name: Jaime Ann
+// Date completed:  03/03/2020
+// Description: Lab 2.5.1. - Section 1 - You Code It
+
+import "fmt"
+
+func main() {
+    //Create a string array of at least 5 values.  It should hold 5 products to buy
+    //Create a float array of at least 5 values.  It should hold a price for each of the products
+    //Iterate through the array and output the product and it's price (similar to a menu)
+}
+*/
+
+// Programmer name: Jaime Ann
+// Date completed:  03/10/2020
+// Description: Project #2 - "The Game of Nim" Suggestion
+
+//basics and objective of game: two players remove stones from three differently valued piles; the ultimate goal is to have all three piles entirely diminished. The player who removes the final stone wins. Players can only remove stones from one pile per turn. There are no limits on how many stones can be taken from the piles, though. 
+
+import "fmt"
+
+func main() {
+
+  //create/declare the three "piles of stones" - variables that store an integer representative of the number of stones in each piles. Piles cannot be < 0. 
+
+  var pileA int
+  var pileB int
+  var pileC int
+  var pileSum int
+  var pileSelection string
+  var stonesRemoved int 
+
+  //set values for each pile of stones
+
+  pileA= 13
+  pileB= 45
+  pileC=7
+  pileSum = pileA + pileB + pileC
+
+  //explain the game and rules to the user briefly
+fmt.Println("Let's play the Game of Nim! The object of the game is simple: be the first to remove all of the stones from three piles of stones and you win! In each turn, you will be allowed to remove as many stones as you like from one pile. You may not remove more stones than are in a pile nor can you remove from more than one pile in each turn. If that all sounds alright, let's get started!")
+
+//declare how many stones are in each pile
+fmt.Println("To start, pile A has", pileA,"stones in it. pile B has", pileB,"stones in it, and pile C has", pileC, "stones.")
+
+  //create an if/until loop that (if- all piles >0) asks the user which pile they want to remove stones from and how many stones they want to remove , and then computer removes the entire amount of stones left in a pile, (until-all piles =0) then, the game declares the winner as whomever removed the last stone to make the piles = 0. 
+
+  //start loop of game
+  for pileSum > 0 {
+  //ask user which pile they want to remove stones from, A, B, or C
+ fmt.Println("Would you like to remove stones from pile A, B, or C? Please enter A, B, or C below to select a pile.")
+ fmt.Scanln(&pileSelection)
+  //If pileSelection = "A" 
+  if pileSelection == "A" {
+  //If pileA=0, print ("Pile A is empty. Please select another pile") else ask user how many stones they want to remove
+  if pileA==0 {
+   fmt.Println("Pile A is empty. Please select another pile")
+  
+  }else{
+    fmt.Println("How many stones would you like to remove from Pile A?")
+    fmt.Scanln(&stonesRemoved)
+  }
+  //if stonesRemoved > pileA, print ("There are not that many stones in the pile. Please remove fewer stones") else stonesRemoved<= pileA, pileA= pileA-stonesRemoved print("Great! There are now",pileA, "stones left in Pile A!")
+
+  if stonesRemoved > pileA {
+    fmt.Println("There are not that many stones in the pile. Please remove fewer stones.")
+  
+  }else{
+  pileA= pileA - stonesRemoved
+  fmt.Println("Great! There are now", pileA,"stones left in Pile A!")
+  }
+  //If pileSelection = "B" 
+   } else if pileSelection == "B"{
+  //If pileB=0, print ("Pile B is empty. Please select another pile") else ask user how many stones they want to remove
+  if pileB==0 {
+    fmt.Println("Pile B is empty. Please select another pile")
+   
+   }else{
+    fmt.Println("How many stones would you like to remove from Pile B?")
+    fmt.Scanln(&stonesRemoved)
+  }
+  //if stonesRemoved > pileB, print ("There are not that many stones in the pile. Please remove fewer stones") else  pileB= pileB-stonesRemoved print("Great! There are now",pileB, "stones left in Pile B!")
+    if stonesRemoved > pileB {
+    fmt.Println("There are not that many stones in the pile. Please remove fewer stones.")
+    
+    }else{
+  pileB= pileB - stonesRemoved
+  fmt.Println("Great! There are now", pileB,"stones left in Pile B!")
+  }
+
+  //If pileSelection = "C" 
+  }else if pileSelection == "C"{
+  //If pileC=0, print ("Pile C is empty. Please select another pile") else ask user how many stones they want to remove and scan input
+  if pileC== 0 {
+   fmt.Println("Pile C is empty. Please select another pile")
+   
+   } else{
+    fmt.Println("How many stones would you like to remove from Pile C?")
+    fmt.Scanln(&stonesRemoved)
+  }
+  //if stonesRemoved > pileC, print ("There are not that many stones in the pile. Please remove fewer stones")else pileC= pileC-stonesRemoved  print("Great! There are now",pileC, "stones left in Pile C!")
+  if stonesRemoved > pileC {
+    fmt.Println("There are not that many stones in the pile. Please remove fewer stones.")
+  
+   } else {
+  pileC= pileC - stonesRemoved
+  fmt.Println("Great! There are now", pileC,"stones left in Pile C!")
+  }
+
+  //if pileSelection not = A, B, or C, print "That isn't one of our piles. Please select pile A, B, or C."
+  } else {
+    fmt.Println("That isn't one of our piles. Please select pile A, B, or C.")
+    }
+  }
+  for pileSum > 0 {
+  /*
+  //if pileA >0, computer subtracts pileA from pileA 
+  if pileA >0 { 
+    pileA= pileA - 1
+  //if pileA =0, computer subtracts pileB from pileB
+  } else if pileA=0
+  pileB= pileB - 1{
+  //if pileB >0, computer subtracts pileB from pileB
+  } else if pileB >0
+  pileB= pileB - 1{
+  //if pileB =0, computer subtracts pileC from pileC
+  } else if pileB=0 
+  pileC= pileC - 1 {
+  //if pileC >0, computer subtracts pileC from pileC.
+   } else if pileC >0
+  pileC= pileC - 1{
+  //if pileC =0, computer subtracts pileA from pileA
+  }else if pileA >0  
+    pileA= pileA - 1{
+  //if pileSum =0, print "Congratulations! 
+  You've removed all of the stones from the piles. You win!"
+    }else if pileSum =0 
+    fmt.Println("Congratulations! You've removed all of the stones from the piles. You win!")
+  
+  }*/
 }
